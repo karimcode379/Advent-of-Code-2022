@@ -56,7 +56,7 @@ function charsInAllThree(arr) {
                     for (let c of ar[2]) {
                         if (b === c) {
                             charArray.push(c);
-                            return; //aborting second loop after finding duplicate for the first time
+                            return; //aborting third loop after finding duplicate for the first time
                         }
                     }
                 }
