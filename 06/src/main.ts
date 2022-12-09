@@ -1,5 +1,4 @@
 import { readFileSync } from "node:fs";
-import { stringify } from "node:querystring";
 
 const input = readFileSync("./src/input.txt", { encoding: "utf-8" })
 	.replace(/\r/g, "")
