@@ -31,6 +31,18 @@ class Directory {
 }
 let dirArray = [];
 //WTF AM I DOING HERE
+/**
+ * The function iterates through the input array, and creates a new directory object for each
+ * directory, and pushes it to the dirArray.
+ *
+ * The function also pushes each file to the filesArray of the current directory.
+ *
+ * The function also keeps track of the current directory, and the parent directory.
+ *
+ * The function returns the root directory.
+ * @param input - Array<Array<string>>
+ * @returns The root directory.
+ */
 function iterate(input) {
     let rootDir = new Directory("rootDir", null, [], []);
     let currentDir = rootDir;
@@ -86,6 +98,12 @@ const totalSpace = 70000000;
 const minimumFreeSpace = 30000000;
 let usedSpace = dirArray[0].getRecursiveFilesSizeSum();
 const freeSpace = totalSpace - usedSpace;
+/**
+ * It takes an array of directories, maps each directory to its recursive files size sum, and then
+ * sorts the resulting array of numbers
+ * @param dirArray - Array<Directory>
+ * @returns An array of numbers.
+ */
 function sumOfAllDirFilesSorted(dirArray) {
     return dirArray
         .map((dir) => dir.getRecursiveFilesSizeSum())
